@@ -8,7 +8,6 @@ export async function main(){
     const realEstate =  await RealEstate.deploy(seller.address);
     const realEstateAddress = await realEstate.getAddress();
 
-    saveFrontendFiles("RealEstate", realEstateAddress);
     
     const Escrow = await ethers.getContractFactory("Escrow");
     const escrow = await Escrow.deploy(
@@ -18,7 +17,8 @@ export async function main(){
         inspector.address
     );
     const escrowAddress = await escrow.getAddress();
-
+    
+    saveFrontendFiles("RealEstate", realEstateAddress);
     saveFrontendFiles("Escrow", escrowAddress);
 
 

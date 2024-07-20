@@ -1,12 +1,12 @@
 // import React from 'react'
 import { Card } from './Card';
-
-const arr = [1,2,2,3,3,4,23,23,2]
+import {data} from "../../assets/data"
+import { IProperty } from '../../interface';
 export const Cards = () => {
   return (
-    <div className='flex gap-5 flex-wrap justify-center'> 
+    <div className='flex gap-7 flex-wrap justify-center'> 
         {
-          arr.map((data:any, id:number) => <Card key={id}/>)
+          data.map((property:IProperty, id:number) => <Card property={property} key={id}/>)
         }
     </div>
   )
