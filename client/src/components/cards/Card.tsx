@@ -1,10 +1,15 @@
 import { DotSquare, Heart, HeartIcon} from "lucide-react"
 import { useState } from "react"
 import { IProperty } from "../../interface"
+import { Dialog } from "../ui/dialog"
+
 
 export const Card = ({property}: any) => {
   const [isLiked, setIsLiked] = useState(false)
+  
   return (
+ 
+
     <div className='min-w-56 max-w-96 w-80 rounded-md overflow-hidden relative hover:shadow-lg cursor-pointer transition-all ease-in-out animate-out hover:scale-105'>
 
    
@@ -34,5 +39,6 @@ export const Card = ({property}: any) => {
         </div>
       </div>
     </div>
+    
   )
 }

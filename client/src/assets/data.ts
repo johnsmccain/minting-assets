@@ -64,11 +64,9 @@ export const data = [
         description: "Luxury Penthouse located in the heart of NYC",
         image: pix,
         id: "2",
+        purchasePrice:20,
         attributes: [
-            {
-                trait_type: "Purchase Price",
-                value: 20
-            },
+            
             {
                 trait_type: "Type of Residence",
                 value: "Condo"
